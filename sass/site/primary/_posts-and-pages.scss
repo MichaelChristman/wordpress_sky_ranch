@@ -1,0 +1,62 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+
+.updated:not(.published) {
+	display: none;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.single,
+.page{
+    
+    .entry-header{
+        margin: 2rem 0 0 0;
+    }
+    
+    .entry-meta{
+        @include font-size(0.8);
+        color:#333;
+        
+        a{  
+            color:#9c9c9c;
+            text-decoration: none;
+            border-bottom:none;
+            
+            &:hover,
+            &:focus {
+                text-decoration: underline;
+            }
+        }
+        
+    }
+    
+    .entry-title{
+        margin: 0;
+    }
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Front Page
+--------------------------------------------------------------*/
+@import "front-page";
+
+/*--------------------------------------------------------------
+## Tags and Categories
+--------------------------------------------------------------*/
+@import "posts/tags-and-categories";

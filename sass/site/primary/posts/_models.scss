@@ -1,0 +1,112 @@
+.home{
+    
+    .entry-models{
+        background-color:$color__secondary;
+        margin:0 -1rem;
+        padding: 30px 0 20px;
+        border-bottom: 1px solid $color__secondary;
+            
+        @media screen and (min-width:$querey__small){
+            margin:0 -8.3vw;
+            padding:2.5rem 8.3% calc(2.5rem - 10px)
+        }
+    }
+    
+    .models-loop{
+        @media screen and (min-width:$querey__small){
+            @include flexbox;
+            @include flex-flow(row wrap);
+            justify-content:space-between;
+            /*align-items:flex-end;*/
+        }
+    }
+    
+    .models-header{
+        display:none;
+        background-color:$color__tertiary;
+        color:$color__secondary;
+        margin:0 0 10px;
+        padding: 2rem;
+        font-weight: 400;
+        
+        @media screen and (min-width:$querey__small){
+            @include flexbox;
+            @include flex(0 1 calc(50% - 5px));
+                justify-content: flex-end;
+                align-items: center;
+    
+        }
+        
+        @media screen and (min-width:$querey__medium){
+            display:none;
+        }
+    }
+    
+    .type-model{
+        position:relative;
+        margin:0 0 10px;
+        overflow:hidden;
+        
+        @media screen and (min-width:$querey__small){
+            /*margin: 0 0 10px;*/
+            @include flex(0 1 calc(50% - 5px));
+        }
+        
+        @media screen and (min-width:$querey__medium){
+            @include flex(0 1 calc(33% - 5px));
+        }
+        
+        .entry-header{
+            
+            
+            text-align: center;
+            
+            
+            
+            .entry-title{
+                /*position:relative;*/
+                font-weight:400;
+                margin:0;
+                
+                a{
+                    display:block;
+                    position: absolute;
+                    right:-65%;
+                    bottom:1.5rem;
+                    width:80%;
+                    z-index: 1;
+                    margin:0;
+                    padding:0.5rem 0;
+                    color:$color__secondary;  
+                    background-color:$color__tertiary;
+                    border:none;
+                    
+                    @include transition(right linear 500ms);
+            
+                    &:hover,
+                    &:focus,
+                    &:active{
+                        right:0;
+
+                    }
+                    
+                    i{
+                        position: absolute;
+                        left:0.75rem;
+                        top:calc(50% - 0.75rem);
+                    }
+                }
+                
+            }
+        }
+        
+        .featured-image{
+            position:relative;
+            img{
+                vertical-align: bottom;
+            }
+            
+        }
+    }
+}
+

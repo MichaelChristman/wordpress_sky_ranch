@@ -1,0 +1,53 @@
+.type-forward{
+    margin:0;
+    padding:3.5rem 0 0 0;
+    
+    .entry-header{
+        position:relative;
+        padding-bottom:0.25rem;
+        
+        &:after{
+            content:'';
+            width:60px; 
+            height:3px; 
+            background-color:$color__secondary; 
+            position:absolute; 
+            bottom:-3px;
+        }
+        
+        @media screen and (min-width:$querey__small){
+            margin:0 auto;
+            width:80%;
+        }
+        
+        @media screen and (min-width:$querey__medium){
+            width:60%;
+        }
+        
+        h2{
+            @include font-size(1.25);
+            margin:0;
+            /*padding:2.5rem;*/
+            font-weight: 400;
+        }
+    }
+    
+    .entry-content{
+        @include font-size(0.75);
+        margin:0 auto;
+        padding:1rem 0 4rem 0;
+        
+        @media screen and (min-width:$querey__small){
+            width:80%;
+        }
+        
+        @media screen and (min-width:$querey__medium){
+            width:60%;
+        }
+        
+        p{
+            margin: 0;
+        }
+    }
+}
+

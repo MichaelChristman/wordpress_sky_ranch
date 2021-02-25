@@ -1,0 +1,22 @@
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+        padding:0.75rem;
+	border: 2px solid;
+	border-color: $color__border-button;
+	/*border-radius: 3px;*/
+	background: $color__background-button;
+	color: $color__text-button;
+	@include font-size(0.75);
+	line-height: 1;
+	/*padding: .6em 1em .4em;*/
+
+	&:hover,
+	&:active,
+	&:focus {
+                color:$color__button-hover;
+                background:$color__background-button-hover;
+		border-color: $color__border-button-focus;
+	}
+}

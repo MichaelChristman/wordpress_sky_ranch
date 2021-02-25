@@ -1,0 +1,63 @@
+.comment-navigation,
+.posts-navigation,
+.post-navigation,
+.paging-navigation{
+    .nav-links{
+        @include flexbox;
+        @include flex-flow(column-reverse);
+
+
+        @media screen and (min-width:$querey__small){
+            @include flex-flow(row);
+            justify-content:space-between;
+        }
+
+        .nav-previous,
+        .nav-next{
+            @include flex(1 0 100%);
+            border:1px solid #ccc;   
+            margin:0.5em 0;
+
+            @media screen and (min-width:$querey__small){
+                @include flex(0 1 calc(50% - 10px));
+            }
+
+            &:hover,
+            &:focus,
+            &:active{
+                background-color: $color__primary;
+            }
+
+        }
+
+        .nav-next{
+            text-align: right;
+            border-right:4px solid $color__primary;
+        }
+
+        .nav-previous{
+            text-align:left;
+            border-left:4px solid $color__primary;
+        }
+
+        a {
+            @include flexbox;
+            @include flex-flow(column);
+            padding:1.25em;
+            border-bottom:none;
+
+
+            &:hover,
+            &:focus,
+            &:active{
+                /*background-color: $color__primary;*/
+                color:#fff;
+            }
+
+
+            span{
+                @include flex(1 0 100%);
+            }
+        }
+    }
+}

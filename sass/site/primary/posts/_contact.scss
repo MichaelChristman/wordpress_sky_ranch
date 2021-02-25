@@ -1,0 +1,178 @@
+.home{
+    section.contact{
+/*        background-color: $color__primary;*/
+        .contact-loop{
+            @media screen and (min-width:$querey__medium){
+                /*@include flexbox;*/
+                /*@include flex-flow(row wrap);*/
+                /*justify-content:center;*/
+                /*align-items:center;*/
+            }
+        }
+        
+        .type-contact-info{
+            margin:0;
+            padding:3.5rem 0 0 0;
+
+            @media screen and (min-width:$querey__medium){
+                /*@include flex(0 0 100%);*/
+            }
+
+            .entry-header{
+                position:relative;
+                padding-bottom:0.25rem;
+                
+                @media screen and (min-width:$querey__medium){
+                    width:60%;
+                    margin:0 auto;
+                }
+
+                &:after{
+                    content:'';
+                    width:60px; 
+                    height:3px; 
+                    background-color:$color__secondary; 
+                    position:absolute; 
+                    bottom:-3px;
+                }
+
+                .entry-title{
+                    margin:0;
+                }
+            }
+            
+            .entry-content{
+                @include font-size(0.75);
+                margin:0 auto;
+                padding:1rem 0 3rem 0;
+                
+                @media screen and (min-width:$querey__medium){
+                    width:60%;
+                    margin:0 auto;
+                }
+
+                p{
+                    margin:0;
+                }
+            }
+        }
+    
+        .contact-details{
+            width: calc(100% + 2rem);
+            position: absolute;
+            /*text-align: center;*/
+            padding: 1.5rem 15%;
+            margin-left: -1rem;
+            background-color:$color__secondary;
+            color:$color__tertiary;
+
+            @media screen and (min-width:$querey__small){
+                width: calc(100% + 16.6vw);
+                margin-left: -8.3vw;
+            }
+            
+            @media screen and (min-width:$querey__medium){
+                padding: 5rem 75% 5rem 0;
+                margin-top: 7rem;
+                
+            }
+
+            .entry-address{
+                @include flexbox;
+                @include flex-flow(row);
+                justify-content:center;
+                align-items:center;
+
+                i{
+                    @include flex(1 0 25%);
+                    text-align: center;
+                    @include font-size(2);
+                    
+                    @media screen and (min-width:$querey__medium){
+                        @include flex(1 0 50%);
+                    }
+                }
+
+                address{
+                    @include flex(1 0 50%);
+                    margin: 0;
+                }
+            }
+
+            .entry-phone-number,
+            .entry-email{
+                @include flexbox;
+                @include flex-flow(row);
+                justify-content:center;
+                align-items:center;
+
+                margin-top:1.5rem;
+
+                i{
+                    @include flex(1 0 25%);
+                    text-align: center;
+                    @include font-size(2);
+                    
+                    @media screen and (min-width:$querey__medium){
+                        @include flex(1 0 50%);
+                    }
+                }
+
+                p{
+                    @include flex(1 0 50%);
+                    margin: 0;
+                }
+            }
+
+
+        }
+        
+        .contact-form{
+            width:100%;
+            margin: 16rem 0 0;
+            padding: 10px;
+            @include box-shadow(0 0 5px #ccc);
+            
+            
+            @media screen and (min-width:$querey__medium){
+                width: 60%;
+                position: relative;
+                margin: 1rem 0 0 40%;
+                background: #fff;
+                z-index: 10;
+            }
+            
+            form{
+                p:nth-child(5){
+                    margin-bottom: 0;
+                }
+                
+                p:nth-child(6) {
+                    margin:0;
+                    
+                }
+            }
+            
+            input[type="text"],
+            input[type="email"]{
+                width:100%;
+                border-width: 0 0 2px 0;
+                border-style:solid;
+                border-color: $color__secondary;
+                border-radius: 0;
+            }
+            
+            textarea{
+                border-radius: 0;
+                border:2px solid $color__secondary;
+            }
+            
+            input[type="submit"]{
+                width:100%;
+            }
+        }
+    }
+    
+    
+}
+

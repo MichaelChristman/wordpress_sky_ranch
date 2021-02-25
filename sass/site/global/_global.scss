@@ -1,0 +1,9 @@
+#main{
+    padding: 0 1rem;
+    /*overflow:hidden;*/
+    @media screen and (min-width:$querey__small){
+        padding: 0 8.3% 1rem;
+    }
+}
+
+

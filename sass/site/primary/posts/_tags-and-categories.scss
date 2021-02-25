@@ -1,0 +1,119 @@
+.tag-cat-wrap{
+    position: relative;
+    margin: 1em -1.5em;
+    padding: 0.5em 1.5em;
+    border-top: 3px solid #000;
+    border-bottom:3px solid #000;
+    
+    @media screen and (min-width:$querey__small){
+        /*width:83%;*/
+        margin: 1em auto;
+        padding: 0.5em 0;
+        @include flexbox;
+        justify-content:space-around;
+    }
+    
+}
+
+.entry-categories,
+.entry-tags{
+    @media screen and (min-width:$querey__small){
+        @include flex(0 1 45.75%);
+    }
+    
+    .post-categories{
+        @include flexbox;
+        @include flex-flow(row wrap);
+        align-items: center;
+        justify-content: space-between;
+        list-style:none;
+        width:100%;
+        margin:0;
+        padding:0;
+        
+        
+        li{
+            @include flex(1 1 auto);
+        }
+    }
+}
+
+
+
+.cat-links{
+    @include flexbox;
+    @include flex-flow(row wrap);
+    align-items: center;
+    justify-content: space-between;
+    margin:0.5em 0;
+    
+    button{
+        @include flex(1 0 100%);
+        margin-bottom: 0.25em;
+    }
+    
+    a{
+        display:none;
+        text-align:center;
+        text-decoration: none;
+        color:#000;
+        padding: 0.25em;
+        margin:0.25em ;
+        border:1px solid black;
+        
+        &:hover,
+        &:focus{
+            background-color: #000;
+            color:#fff;
+            text-decoration: underline;
+        }
+    }
+    
+    &.toggled-on{
+        a{
+            display:block;
+            @include flex(1 1 auto);
+            
+        }
+    }
+}
+
+.tags-links{
+    @include flexbox;
+    @include flex-flow(row wrap);
+    align-items: center;
+    justify-content: space-between;
+    margin:0.5em 0;
+    
+    button{
+        @include flex(1 0 100%);
+        margin-bottom: 0.25em;
+    }
+    
+    a{
+        display:none;
+        text-align:center;
+        text-decoration: none;
+        color:#000;
+        padding: 0.25em;
+        margin:0.25em ;
+        border:1px solid black;
+        
+        &:hover,
+        &:focus{
+            background-color: #000;
+            color:#fff;
+            text-decoration: underline;
+        }
+    }
+    
+    &.toggled-on{
+        a{
+            display:block;
+            @include flex(1 1 auto);
+            
+            
+        }
+    }
+}
+
